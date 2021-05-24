@@ -44,4 +44,3 @@ def test_GoToDashboard(driver):
         dash.click_Save()
     with allure.step("Проверяем успешно ли создался ползователь"):
         dash.check_status()
-    time.sleep(20)
