@@ -1,4 +1,3 @@
-import time
 import allure
 from ..Pages.Dashboard import Dashboard
 from ..Pages.LogIn import LogIn
