@@ -1,7 +1,4 @@
 import allure
-from allure_commons.types import AttachmentType
-
-from ..Utility.CurrentTime import curr_time
 from ..Pages.BasePage import BasePage
 from ..Pages.Locators import LoginPageLocators
 
