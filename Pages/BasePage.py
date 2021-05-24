@@ -1,4 +1,7 @@
+import allure
+from allure_commons.types import AttachmentType
 from selenium.common.exceptions import NoSuchElementException
+from ..Utility.CurrentTime import curr_time
 from ..Utility.ReadProp import ReadConfig
 
 
@@ -22,3 +25,7 @@ class BasePage:
         except NoSuchElementException:
             return False
         return True
+
+    def screen(self):
+        allure.attach(self.driver.get_screenshot_as_png(), name='Screenshot_' + str(curr_time()),
+                      attachment_type=AttachmentType.PNG)

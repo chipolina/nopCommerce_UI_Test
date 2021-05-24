@@ -1,8 +1,12 @@
+import allure
 import pytest
+from allure_commons.types import AttachmentType
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.opera import OperaDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
+
+from .Utility.CurrentTime import curr_time
 
 
 @pytest.fixture()
