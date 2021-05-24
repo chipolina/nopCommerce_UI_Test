@@ -4,6 +4,7 @@ config = configparser.RawConfigParser()
 config.read(".\\Configuration\\config.ini")
 
 
+# Читаем данные из файлы config.ini
 class ReadConfig:
     @staticmethod
     def getUrl():

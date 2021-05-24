@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
+# Список элементов на страницах
 class LoginPageLocators:
     FIELD_Email = (By.ID, 'Email')
     FIELD_Password = (By.ID, 'Password')
@@ -37,7 +38,6 @@ class AddCustomerLocators:
     SELECT_DOB = (By.XPATH, "//span[contains(@class,'k-select') and @role='button']")
     FIELD_CompanyName = (By.ID, "Company")
     CHECK_Tax = (By.ID, "IsTaxExempt")
-    # SELECT_Newsletter = //li[normalize-space()='Guests']
     SELECT_Roles = (By.XPATH, "//div[contains(@class, 'input-group-append input-group-required')]")
     SELECT_Role_Registered = (By.XPATH, "//*[@id='SelectedCustomerRoleIds_listbox']/li[contains(text(), 'Registered')]")
     SELECT_Role_Moderator = (

@@ -7,9 +7,9 @@ class LogIn(BasePage):
 
     def check_title(self):
         with allure.step('Записываем title страницы в переменную'):
+            title = "Your store. Login"
             act_title = self.driver.title
-            title = "Your store. Login1"
-        with allure.step('Проверяем совпадает ли title c "Your store. Login"'):
+        with allure.step('Проверяем совпадает ли title c {}'.format(title)):
             if act_title != title:
                 self.screen()
         assert act_title == title, "Wrong title"
@@ -25,10 +25,13 @@ class LogIn(BasePage):
         password.send_keys(userpassword)
 
     def click_LogIn(self):
-        btn = self.driver.find_element(*LoginPageLocators.BTN_LogIn)
-        btn.click()
+        self.driver.find_element(*LoginPageLocators.BTN_LogIn).click()
+        title = "Dashboard / nopCommerce administration"
         act_title = self.driver.title
-        assert act_title == "Dashboard / nopCommerce administration", 'Wrong title'
+        with allure.step('Проверяем совпадает ли title c {}'.format(title)):
+            if act_title != title:
+                self.screen()
+        assert act_title == title, 'Wrong title'
 
     def click_LogIn_Error(self):
         self.driver.find_element(*LoginPageLocators.BTN_LogIn).click()

@@ -5,6 +5,8 @@ from webdriver_manager.opera import OperaDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 
 
+# Функция для 3 разных драйверов под Chrome, Firefox, Opera. При запуске тесто необходимо указывать имя драйвера
+# --browser = chrome|firefox|opera
 @pytest.fixture()
 def driver(request):
     browser = request.config.getoption("browser")
