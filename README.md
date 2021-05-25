@@ -3,7 +3,7 @@
 
 Небольшой фреймворк использует [PyTest](https://docs.pytest.org/en/6.2.x/ "PyTest"),    [Selenium WD](https://www.selenium.dev/, "Selenium WD")   , [Allure](https://docs.qameta.io/allure/ "Allure"), Page Object Model и так же [Google](https://www.google.com/ "Google")
 
-Запуск тестов происходит командой в PyCharm или любой другой IDE:
+Запуск тестов происходит командой в PyCharm или любой другой IDE: <br>
 pytest -v -s alluredir=Reports --browser=chrome|opera|firefox -m smoke|regullar(опционально)
 
 Формирование Allure отчета:
