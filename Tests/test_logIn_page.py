@@ -1,10 +1,12 @@
 import allure
+import pytest
 
 from ..Pages.LogIn import LogIn
 
 
 @allure.feature('Tests Login Page')
 @allure.story('Check Title')
+@pytest.mark.regullar
 def test_LogInPage_title(driver):
     page = LogIn(driver)
     with allure.step("Открываем страницу"):
@@ -15,6 +17,7 @@ def test_LogInPage_title(driver):
 
 @allure.feature('Tests Login Page')
 @allure.story('Check Dashboard title')
+@pytest.mark.smoke
 def test_GoToDashboard(driver):
     page = LogIn(driver)
     with allure.step("Открываем страницу"):
@@ -29,6 +32,7 @@ def test_GoToDashboard(driver):
 
 @allure.feature('Tests Login Page')
 @allure.story('Check error block appearence')
+@pytest.mark.regullar
 def test_GoToDashboard_Error(driver):
     page = LogIn(driver)
     with allure.step("Открываем страницу"):

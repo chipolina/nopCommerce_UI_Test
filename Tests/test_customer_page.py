@@ -1,12 +1,16 @@
 import time
 
 import allure
+import pytest
 
 from ..Pages.Customers import Customers
 from ..Pages.Dashboard import Dashboard
 from ..Pages.LogIn import LogIn
 
 
+@allure.feature('Tests Customer page')
+@allure.feature('Tests Search')
+@pytest.mark.regullar
 def test_searchByEmail(driver):
     page = LogIn(driver)
     with allure.step("Открываем страницу"):

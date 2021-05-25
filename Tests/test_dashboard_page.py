@@ -1,9 +1,13 @@
 import allure
+import pytest
 from ..Pages.Dashboard import Dashboard
 from ..Pages.LogIn import LogIn
 
 
-def test_GoToDashboard(driver):
+@allure.feature('Tests Dashboard page')
+@allure.feature('Tests Create New Customer')
+@pytest.mark.regullar
+def test_createNewCustomer(driver):
     page = LogIn(driver)
     with allure.step("Открываем страницу"):
         page.open()
