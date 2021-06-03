@@ -5,7 +5,7 @@
 <br><br>
 
 Запуск тестов происходит командой в PyCharm или любой другой IDE: <br>
-pytest -v -s alluredir=Reports --browser=chrome|opera|firefox -m smoke|regullar(опционально)
+pytest -v -s --alluredir=Reports --browser=chrome|opera|firefox -m smoke|regullar(опционально)
 
 Формирование Allure отчета: <br>
 allure serve Reports
