@@ -13,6 +13,7 @@ from ..Pages.LogIn import LogIn
 @pytest.mark.regullar
 def test_searchByEmail(driver):
     page = LogIn(driver)
+
     with allure.step("Открываем страницу"):
         page.open()
     with allure.step("Передаем Email администратора"):
